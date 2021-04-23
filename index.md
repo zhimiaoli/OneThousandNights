@@ -10,5 +10,8 @@
 
 请多多支持梁文道看理想 [https://www.vistopia.com.cn/](请多多支持梁文道看理想 https://www.vistopia.com.cn/)
 
-订阅RSS [https://zhimiaoli.github.io/OneThousandNight/feed.xml](https://zhimiaoli.github.io/OneThousandNight/)
+订阅RSS [https://zhimiaoli.github.io/OneThousandNight/feed.xml](https://zhimiaoli.github.io/OneThousandNight/feed.xml)
 
+[Overcast](overcast://x-callback-url/add?url=https://zhimiaoli.github.io/OneThousandNight/feed.xml) ,
+[Pocket Casts](pktc://subscribe/zhimiaoli.github.io/OneThousandNight/feed.xml) ,
+[苹果播客](podcast://zhimiaoli.github.io/OneThousandNight/feed.xml)
