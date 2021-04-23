@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# 🎧 一千零一夜 播客 梁文道
 
-You can use the [editor on GitHub](https://github.com/zhimiaoli/OneThousandNight/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![一千零一夜封面图](http://cdn.vistopia.com.cn/1535342540956.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+梁文道《八分》播客主要是时事评论，而且周三周五一周只更新两集不够听。
 
-### Markdown
+现在通勤时间变长了，每天差不多70公里，要两个小时，将之前听过的找出来重新听，但是《一千零一夜》没有用播客的形式放出来。于是抓了看理想网站的一千零一夜内容，放到Overcast中来听。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+一千零一夜 官方请访问 [https://shop.vistopia.com.cn/detail?id=z_z7D](https://shop.vistopia.com.cn/detail?id=z_z7D)
 
-```markdown
-Syntax highlighted code block
+请多多支持梁文道看理想 [https://www.vistopia.com.cn/](请多多支持梁文道看理想 https://www.vistopia.com.cn/)
 
-# Header 1
-## Header 2
-### Header 3
+订阅RSS [https://zhimiaoli.github.io/OneThousandNight/feed.xml](https://zhimiaoli.github.io/OneThousandNight/)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zhimiaoli/OneThousandNight/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
