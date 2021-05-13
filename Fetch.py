@@ -1,7 +1,7 @@
 import sys
 import requests
 from jinja2 import Template
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 # rss feed xml get from https://2021.jackbarber.co.uk/blog/2017-02-14-podcast-rss-feed-template
@@ -14,7 +14,7 @@ feed_template = """<?xml version="1.0" encoding="UTF-8"?>
 <itunes:subtitle>回到人间的读书节目</itunes:subtitle>
 <itunes:author>梁文道</itunes:author>
 <itunes:summary>只有晚上，只在街头；梁文道导读，回到人间的读书节目。</itunes:summary>
-<description>只有晚上，只在街头；梁文道导读，回到人间的读书节目。</description>
+<description><![CDATA[ 只有晚上，只在街头；梁文道导读，回到人间的读书节目。<br> 看理想数据元节目更新时间不准确。]]> </description>
 <itunes:owner>
     <itunes:name>梁文道-看理想</itunes:name>
     <itunes:email>me@example.com</itunes:email>
@@ -26,7 +26,7 @@ feed_template = """<?xml version="1.0" encoding="UTF-8"?>
 <item>
     <title>{{episode['title']}}</title>
     <itunes:summary>{{episode['episodeDetail']['share_desc']}}</itunes:summary>
-    <description><![CDATA[ {{episode['episodeDetail']['share_desc']}} <br> 标签:{{episode['episodeDetail']['tag']}} <br>{{episode['episodeDetail']['content'] | safe}}]]> </description>
+    <description><![CDATA[ 标签:{{episode['episodeDetail']['tag']}} <br> 在看理想app中查看 <br> <a href="{{episode['share_url']}}">{{episode['share_url']}}</a><br><{{episode['episodeDetail']['content'] | safe}}]]> </description>
     <link>{{episode['share_url']}}</link>
     <enclosure url="{{episode['media_key_full_url']}}" type="audio/mpeg" length="{{episode['media_size']}}"></enclosure>
     <pubDate>{{episode['pubDate']}}</pubDate>
@@ -48,10 +48,18 @@ def fetchepisodes():
     episodes = []
     if resp.status_code == 200:
         podcasts_data = resp.json()
+        current_updateDate,pre_updateDate = datetime.now() - timedelta(days=6650), datetime.now() - timedelta(days=6650)
+        dt = timedelta(days=1)
+        # airingDate = podcasts_data['data']['article_list'][0]['']
         for episode in podcasts_data['data']['article_list']:
             episodeDetail = fetchepisodeDetail(episode['article_id'])
             print("fething episodes"+episode['title'])
-            episode['pubDate'] = datetime.fromtimestamp(int(episode['media_key'][:-4])/1000).strftime("%a, %d %b %Y %H:%M:%S %z")
+            current_updateDate = datetime.fromtimestamp(int(episode['media_key'][:-4])/1000)
+            while not current_updateDate > (pre_updateDate + dt):
+                current_updateDate = current_updateDate + dt
+            print(current_updateDate)
+            pre_updateDate = current_updateDate
+            episode['pubDate'] = current_updateDate.strftime("%a, %d %b %Y %H:%M:%S %z")
             # guess real update time from filename, media_key field.
             episode['episodeDetail'] = episodeDetail['data']['part'][0]
             # attach essential episode detail to episode params.
