@@ -17,7 +17,7 @@ feed_template = """<?xml version="1.0" encoding="UTF-8"?>
 <description><![CDATA[ 只有晚上，只在街头；梁文道导读，回到人间的读书节目。<br> 看理想数据元节目更新时间不准确。]]> </description>
 <itunes:owner>
     <itunes:name>梁文道-看理想</itunes:name>
-    <itunes:email>me@example.com</itunes:email>
+    <itunes:email>podcast@miao.li</itunes:email>
 </itunes:owner>
 <itunes:explicit>no</itunes:explicit>
 <itunes:image href="https://cdn.vistopia.com.cn/1535342540956.png" />
